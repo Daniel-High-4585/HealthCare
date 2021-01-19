@@ -11,6 +11,34 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'crear-paciente',
+    loadChildren: () => import('./paciente/crear-paciente/crear-paciente.module').then( m => m.CrearPacientePageModule)
+  },
+  {
+    path: 'crear-doctor',
+    loadChildren: () => import('./doctor/crear-doctor/crear-doctor.module').then( m => m.CrearDoctorPageModule)
+  },
+  {
+    path: 'lista-pacientes-doctor',
+    loadChildren: () => import('./doctor/lista-pacientes-doctor/lista-pacientes-doctor.module').then( m => m.ListaPacientesDoctorPageModule)
+  },
+  {
+    path: 'lista-pacientes',
+    loadChildren: () => import('./paciente/lista-pacientes/lista-pacientes.module').then( m => m.ListaPacientesPageModule)
+  },
+  {
+    path: 'editar-paciente',
+    loadChildren: () => import('./paciente/editar-paciente/editar-paciente.module').then( m => m.EditarPacientePageModule)
+  },
+  {
+    path: 'editar-doctor',
+    loadChildren: () => import('./doctor/editar-doctor/editar-doctor.module').then( m => m.EditarDoctorPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
 ];
 
 @NgModule({
