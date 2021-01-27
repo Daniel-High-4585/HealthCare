@@ -1,10 +1,10 @@
 export class Paciente {
-    name: String;
-    lastName: String;
+    name: string;
+    lastName: string;
     age: number;
     height: number;
     weight: number;
-    notes: String[];
-    doctor: String;
-    blood: String;
+    notes: string[];
+    doctor: string;
+    blood: string;
 }

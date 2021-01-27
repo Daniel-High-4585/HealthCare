@@ -1,20 +1,64 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      HelathCare
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <img src="../pictures/Doctor.jpg" />
+    <ion-card-header>
+      <ion-card-title>Doctore</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      He aqui la lista del los docores registrados.
+    </ion-card-content>
+    <ion-button size="small">Acceder a la Lista</ion-button>
+  </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <img src="../pictures/Paciente.jpg" />
+    <ion-card-header>
+      <ion-card-title>Pacientes</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      He aqui la lista del los Pacientes registrados.
+    </ion-card-content>
+    <ion-button size="small" (click)="btnListaP()">Acceder a la Lista</ion-button>
+  </ion-card>
+
+  <ion-card>
+    <img src="../pictures/Mis¨Pacientes.jpg" />
+    <ion-card-header>
+      <ion-card-title>Mis Pacientes</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      He aqui la lista de mis pacientes.
+    </ion-card-content>
+    <ion-button size="small">Acceder a la Lista</ion-button>
+  </ion-card>
+
+  <ion-card>
+    <img src="../pictures/Doctor.jpg" />
+    <ion-card-header>
+      <ion-card-title>Nuevo Paciente</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+     Aqui es el registro de un nuevo Paciente
+    </ion-card-content>
+    <ion-button size="small">Acceder al Formulario</ion-button>
+  </ion-card>
+
+  <ion-card>
+    <img src="../pictures/Doctor.jpg" />
+    <ion-card-header>
+      <ion-card-title>Nuevo Doctor</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+     Aqui es el registro de un nuevo Doctor
+    </ion-card-content>
+    <ion-button size="small">Acceder al Formulario</ion-button>
+  </ion-card>
 </ion-content>

@@ -1,10 +1,9 @@
 export class Doctor {
-    name: String;
-    lastName: String;
-    pass: String;
-    patient: String[];
+    name: string;
+    lastName: string;
+    pass: string;
+    patient: string[];
     age: number;
     active: boolean;
     email: string;
-    password: string;
 }

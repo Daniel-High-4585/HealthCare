@@ -11,15 +11,15 @@ export class AuthService {
 
   public isLogged: any = false;
   constructor(public afAuth: AngularFireAuth, private afsAuth: AngularFireAuth) {
-    afAuth.authState.subscribe(doctor =>(this.isLogged = doctor));
+    afAuth.authState.subscribe(doctor => (this.isLogged = doctor));
    }
 
-   async onReggister(doctor:Doctor){
+   async onReggister(doctor: Doctor){
      try{
        return await this.afAuth.createUserWithEmailAndPassword(
          doctor.email,
-         doctor.password
-       )
+         doctor.pass
+       );
      } catch (error){
        console.log("Error al registrar", error)
      }
@@ -29,7 +29,7 @@ export class AuthService {
      try{
        return await this.afAuth.signInWithEmailAndPassword(
          doctor.email,
-         doctor.password
+         doctor.pass
        )
      } catch (error) {
        console.log('Error al ingresar', error)
