@@ -13,18 +13,32 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { AngularFirestore } from '@angular/fire/firestore';
+<<<<<<< HEAD
+=======
+import { AngularFireAuthModule, AngularFireAuth } from '@angular/fire/auth';
+>>>>>>> a6ab70689d48b0c270b86ac72d2928ef578a17be
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
             AngularFireModule.initializeApp(environment.firebaseConfig),
+<<<<<<< HEAD
             AngularFireDatabaseModule],
+=======
+            AngularFireDatabaseModule,
+            AngularFireAuthModule,],
+>>>>>>> a6ab70689d48b0c270b86ac72d2928ef578a17be
   providers: [
     StatusBar,
     SplashScreen,
     AngularFirestore,
+<<<<<<< HEAD
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+=======
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    AngularFirestore
+>>>>>>> a6ab70689d48b0c270b86ac72d2928ef578a17be
   ],
   bootstrap: [AppComponent]
 })

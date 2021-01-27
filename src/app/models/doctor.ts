@@ -5,4 +5,6 @@ export class Doctor {
     patient: String[];
     age: number;
     active: boolean;
+    email: string;
+    password: string;
 }
