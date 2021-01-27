@@ -10,7 +10,25 @@ export class HomePage {
 
   constructor(private router: Router) {}
 
-  btnListaP(){
+
+  // Botones para redirigir a una pagina
+
+  btnListaP(){// lista de pacientes
     this.router.navigateByUrl('/lista-pacientes');
+  }
+
+  btnListaD(){// lista de doctores
+    this.router.navigateByUrl('/lista-doctor');
+  }
+
+  btnMisP(){// lista de mis pacientes
+    this.router.navigateByUrl('/lista-pacientes-doctor');
+  }
+
+  btncrearP(){// Crear paciente
+    this.router.navigateByUrl('/crear-paciente');
+  }
+  btncrearD(){// Crear doctor
+    this.router.navigateByUrl('/crear-doctor');
   }
 }
