@@ -4,13 +4,21 @@
 
 export const environment = {
   production: false,
-    firebaseConfig: {
+   /* firebaseConfig: {
     apiKey: "AIzaSyDsaCUSMdBwWEHPB1Zg_v65Fhxmkpcm58U",
     authDomain: "healthcare-c0622.firebaseapp.com",
     projectId: "healthcare-c0622",
     storageBucket: "healthcare-c0622.appspot.com",
     messagingSenderId: "122387139883",
     appId: "1:122387139883:web:2df22ed6cbdbb6df6a496e"
+  },*/
+  firebaseConfig : {
+    apiKey: "AIzaSyCWXHbsU3q0eWZXwiOR8Eej3wIciImPzJ4",
+    authDomain: "login-healthcare.firebaseapp.com",
+    projectId: "login-healthcare",
+    storageBucket: "login-healthcare.appspot.com",
+    messagingSenderId: "296772495117",
+    appId: "1:296772495117:web:3c84a00978703e5b8d3244"
   }
 };
 

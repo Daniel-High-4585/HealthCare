@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard} from "./guards/auth.guard";
+import { NologinGuard} from "./guards/nologin.guard";
 
 const routes: Routes = [
   
@@ -9,8 +11,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'home',canActivate : [AuthGuard],
+    loadChildren: ()=> import('./home/home.module').then( m => m.HomePageModule)
   },
   {path: "register", 
   loadChildren: ()=> import('./register/register.module').then(m => m.RegisterPageModule)},
@@ -39,15 +41,20 @@ const routes: Routes = [
     loadChildren: () => import('./doctor/editar-doctor/editar-doctor.module').then( m => m.EditarDoctorPageModule)
   },
   {
-    path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    path: 'login',canActivate : [NologinGuard],
+    loadChildren: () => import('./componentes/login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
-  },  {
+  },
+  {
     path: 'lista-doctor',
     loadChildren: () => import('./doctor/lista-doctor/lista-doctor.module').then( m => m.ListaDoctorPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./componentes/login/login.module').then( m => m.LoginPageModule)
   },
 
 ];

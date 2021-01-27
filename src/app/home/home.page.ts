@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,12 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(private router: Router) {}
 
+  constructor(public authService: AuthService, private router: Router) {}
 
+  onLogout(){
+    this.authService.logout();
+  }
   // Botones para redirigir a una pagina
 
   btnListaP(){// lista de pacientes
