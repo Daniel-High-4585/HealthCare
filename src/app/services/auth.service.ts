@@ -25,14 +25,14 @@ export class AuthService {
      }
    }
 
-   async onLogin(doctor:Doctor){
+   async onLogin(doctor: Doctor){
      try{
        return await this.afAuth.signInWithEmailAndPassword(
          doctor.email,
          doctor.pass
-       )
+       );
      } catch (error) {
-       console.log('Error al ingresar', error)
+       console.log('Error al ingresar', error);
      }
    }
 

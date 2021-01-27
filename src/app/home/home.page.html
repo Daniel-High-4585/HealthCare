@@ -7,19 +7,20 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
   <ion-card>
-    <img src="../pictures/Doctor.jpg" />
+    <img src="../pictures/crearPaciente.png" >
     <ion-card-header>
-      <ion-card-title>Doctore</ion-card-title>
+      <ion-card-title>Nuevo Paciente</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      He aqui la lista del los docores registrados.
+     Aqui es el registro de un nuevo Paciente
     </ion-card-content>
-    <ion-button size="small">Acceder a la Lista</ion-button>
+    <ion-button size="small" (click)="btncrearP()">Acceder al Formulario</ion-button>
   </ion-card>
 
   <ion-card>
-    <img src="../pictures/Paciente.jpg" />
+    <img src="../pictures/Paciente.gif">
     <ion-card-header>
       <ion-card-title>Pacientes</ion-card-title>
     </ion-card-header>
@@ -30,35 +31,35 @@
   </ion-card>
 
   <ion-card>
-    <img src="../pictures/Mis¨Pacientes.jpg" />
+    <img src="../pictures/misPacientes.png">
     <ion-card-header>
       <ion-card-title>Mis Pacientes</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       He aqui la lista de mis pacientes.
     </ion-card-content>
-    <ion-button size="small">Acceder a la Lista</ion-button>
+    <ion-button size="small" (click)="btnMisP()">Acceder a la Lista</ion-button>
   </ion-card>
 
   <ion-card>
-    <img src="../pictures/Doctor.jpg" />
+    <img src="../pictures/Doctor.png">
     <ion-card-header>
-      <ion-card-title>Nuevo Paciente</ion-card-title>
+      <ion-card-title>Doctores</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-     Aqui es el registro de un nuevo Paciente
+      He aqui la lista del los doctores registrados.
     </ion-card-content>
-    <ion-button size="small">Acceder al Formulario</ion-button>
+    <ion-button size="small" (click)="btnListaD()">Acceder a la Lista</ion-button>
   </ion-card>
 
   <ion-card>
-    <img src="../pictures/Doctor.jpg" />
+    <img src="../pictures/crearDoctor.png">
     <ion-card-header>
       <ion-card-title>Nuevo Doctor</ion-card-title>
     </ion-card-header>
     <ion-card-content>
      Aqui es el registro de un nuevo Doctor
     </ion-card-content>
-    <ion-button size="small">Acceder al Formulario</ion-button>
+    <ion-button size="small" (click)="btncrearD()">Acceder al Formulario</ion-button>
   </ion-card>
 </ion-content>
