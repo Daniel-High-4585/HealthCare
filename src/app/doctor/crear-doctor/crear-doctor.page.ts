@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 
 import { DoctorService} from '../../services/doctor.service';
 import { Doctor} from '../../models/doctor';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-crear-doctor',
@@ -15,7 +16,7 @@ export class CrearDoctorPage implements OnInit {
   public myForm: FormGroup;
   public doctor: Doctor;
 
-  constructor(private doctorService: DoctorService, private fb: FormBuilder) { }
+  constructor(private doctorService: DoctorService, private fb: FormBuilder, public router: Router) { }
 
   ngOnInit() {
     this.myForm = this.fb.group({
@@ -41,6 +42,7 @@ export class CrearDoctorPage implements OnInit {
     };
     this.doctorService.createDoctor(this.doctor).then( res =>{
       alert('El doctor se a generado con exito');
+      this.router.navigate(['/home']);
     }).catch(err => alert('Error, no se puedo generar el registro'))
   };
 }
