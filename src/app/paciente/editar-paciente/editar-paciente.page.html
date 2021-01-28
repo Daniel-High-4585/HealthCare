@@ -1,12 +1,85 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
-    </ion-buttons>
-    <ion-title>editarPaciente</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Editar pacientes</ion-title>
+    </ion-toolbar>
 </ion-header>
-
 <ion-content>
+    <ion-fab horizontal="end" vertical="top">
+        <ion-fab-button>
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list>
+            <ion-fab-button color="success">
+                <ion-icon name="checkmark"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button color="warning">
+                <ion-icon name="close"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button color="danger">
+                <ion-icon name="trash"></ion-icon>
+            </ion-fab-button>
+        </ion-fab-list>
+    </ion-fab>
+    <ion-grid>
+        <form [formGroup]="myForm">
+            <ion-row color="primary" justify-content-center>
+                <ion-col align-self-center size-md="6" size-lg="5" size-sx="12">
+                    <div text-center>
+                        <h3>Amos a editar un Paciente</h3>
+                    </div>
+                    <div padding>
+                        <ion-item>
+                            <label>Nombre: </label>
+                            <ion-input formControlName="name" type="text"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <label>Apellido: </label>
+                            <ion-input formControlName="lastName" type="text"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <label>Edad: </label>
+                            <ion-input formControlName="age" type="number"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Tipo de sangre: </ion-label>
+                            <ion-select interface="popover" formControlName="blood">
+                                <ion-select-option value="O-">O-</ion-select-option>
+                                <ion-select-option value="O+">O+</ion-select-option>
+                                <ion-select-option value="A-">A-</ion-select-option>
+                                <ion-select-option value="A+">A+</ion-select-option>
+                                <ion-select-option value="B-">B-</ion-select-option>
+                                <ion-select-option value="B+">B+</ion-select-option>
+                                <ion-select-option value="AB-">AB-</ion-select-option>
+                                <ion-select-option value="AB+">AB+</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                        <ion-item>
+                            <label>Altura: </label>
+                            <ion-input formControlName="height" type="number"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <label>Peso:  </label>
+                            <ion-input formControlName="weight" type="number"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <label>Doctor</label>
+                            <ion-input formControlName="doctor" type="text"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <label>Notas: </label>
+                            <ion-input formControlName="notes" type="text"></ion-input>
+                        </ion-item>
+                    </div>
 
+                    <div padding>
+                        <ion-button size="large" type="button" [disabled]="!myForm.valid" (click)="create()" expand="block">Guardar</ion-button>
+                    </div>
+
+                </ion-col>
+            </ion-row>
+        </form>
+    </ion-grid>
 </ion-content>
