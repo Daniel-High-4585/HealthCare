@@ -14,15 +14,16 @@ export class AuthService {
     AFauth.authState.subscribe(doctor => (this.isLogged = doctor));
 
     }
-    login(email: string, password: string){
 
-      return new Promise((resolve, rejected) =>{
+    login(email: string, password: string){
+      return new Promise((resolve, rejected) => {
         this.AFauth.signInWithEmailAndPassword(email, password).then(user => {
           resolve(user);
         }).catch(err => rejected(err));
       });
 
     }
+
     logout(){
       this.AFauth.signOut().then(() => {
         this.router.navigate(['/login']);
