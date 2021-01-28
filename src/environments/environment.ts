@@ -12,7 +12,18 @@ export const environment = {
     messagingSenderId: "122387139883",
     appId: "1:122387139883:web:2df22ed6cbdbb6df6a496e"
   }
+
+  /*Firabase de kike
+  firebaseConfig : {
+    apiKey: "AIzaSyCWXHbsU3q0eWZXwiOR8Eej3wIciImPzJ4",
+    authDomain: "login-healthcare.firebaseapp.com",
+    projectId: "login-healthcare",
+    storageBucket: "login-healthcare.appspot.com",
+    messagingSenderId: "296772495117",
+    appId: "1:296772495117:web:3c84a00978703e5b8d3244"
+  }*/
 };
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
