@@ -1,6 +1,7 @@
 import { PacienteService } from './../../services/paciente.service';
 import { Paciente } from './../../models/paciente';
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationExtras} from "@angular/router"
 
 @Component({
   selector: 'app-lista-pacientes',
@@ -11,7 +12,7 @@ export class ListaPacientesPage implements OnInit {
 
   public patient: Paciente[];
 
-  constructor(private service: PacienteService) {
+  constructor(private service: PacienteService, private router: Router) {
     this.service.getPatient().subscribe(data =>{
       this.patient = data.map(e => {
         return {
@@ -23,6 +24,15 @@ export class ListaPacientesPage implements OnInit {
    }
 
   ngOnInit() {
+  }
+
+  detail(doctor: Paciente){
+    let navext: NavigationExtras={
+      queryParams:{
+        special: JSON.stringify(doctor)
+      }
+    };
+    this.router.navigate(['/editar-paciente'],navext);
   }
 
 }
