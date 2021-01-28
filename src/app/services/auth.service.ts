@@ -9,46 +9,40 @@ import {Router} from '@angular/router';
 })
 export class AuthService {
 
-  /*
   public isLogged: any = false;
-  constructor(public afAuth: AngularFireAuth, private afsAuth: AngularFireAuth) {
-    afAuth.authState.subscribe(doctor => (this.isLogged = doctor));*/
-
-    constructor(private AFauth: AngularFireAuth, private router: Router){
+  constructor(public AFauth: AngularFireAuth, private afsAuth: AngularFireAuth, private router: Router) {
+    AFauth.authState.subscribe(doctor => (this.isLogged = doctor));
 
     }
-    login(email:string, password:string){
-      
+    login(email: string, password: string){
+
       return new Promise((resolve, rejected) =>{
-        this.AFauth.signInWithEmailAndPassword(email,password).then(user =>{
-          resolve(user);  
+        this.AFauth.signInWithEmailAndPassword(email, password).then(user => {
+          resolve(user);
         }).catch(err => rejected(err));
       });
-      
+
     }
     logout(){
-      this.AFauth.signOut().then(() =>{
-        this.router.navigate(['/login'])
+      this.AFauth.signOut().then(() => {
+        this.router.navigate(['/login']);
       });
     }
-   }
 
-   /*
-   async onReggister(doctor: Doctor){
+    async onReggister(doctor: Doctor){
      try{
-       return await this.afAuth.createUserWithEmailAndPassword(
+       return await this.AFauth.createUserWithEmailAndPassword(
          doctor.email,
          doctor.pass
        );
      } catch (error){
-       console.log("Error al registrar", error)
+       console.log('Error al registrar', error);
      }
    }
-  */
- /*
+
    async onLogin(doctor: Doctor){
      try{
-       return await this.afAuth.signInWithEmailAndPassword(
+       return await this.AFauth.signInWithEmailAndPassword(
          doctor.email,
          doctor.pass
        );
@@ -58,4 +52,3 @@ export class AuthService {
    }
 
 }
-*/

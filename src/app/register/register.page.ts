@@ -18,7 +18,7 @@ export class RegisterPage implements OnInit {
 
   async onRegister(){
     const user = await this.authSvc.onReggister(this.doctor);
-    if(user){
+    if (user){
       console.log('Usuario creado con éxito');
       this.router.navigateByUrl('/home');
     }
