@@ -8,58 +8,59 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-card>
-    <img src='../pictures/crearPaciente.png' >
-    <ion-card-header>
+  <ion-card class="card" color="secondary">
+    <img src='src/app/pictures/crearPaciente.png' class="pic">
+    <ion-card-header class="jeder">
       <ion-card-title>Nuevo Paciente</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content class="con">
      Aqui es el registro de un nuevo Paciente
     </ion-card-content>
-    <ion-button size="small" (click)="btncrearP()">Acceder al Formulario</ion-button>
+    <ion-button  size="full" (click)="btncrearP()" class="bnt">Acceder al Formulario</ion-button>
   </ion-card>
 
-  <ion-card>
-    <img src='../pictures/Paciente.gif'>
-    <ion-card-header>
+  <ion-card class="card" color="secondary">
+    <img src='../pictures/Paciente.gif' class="pic">
+    <ion-card-header class="jeder">
       <ion-card-title>Pacientes</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content  class="con">
       He aqui la lista del los Pacientes registrados.
     </ion-card-content>
-    <ion-button size="small" (click)="btnListaP()">Acceder a la Lista</ion-button>
+    <ion-button size="full" (click)="btnListaP()" class="bnt">Acceder a la Lista</ion-button>
   </ion-card>
 
-  <ion-card>
-    <img src='../pictures/misPacientes.png'>
-    <ion-card-header>
+  <ion-card class="card" color="secondary">
+    <img src='../pictures/misPacientes.png' class="pic">
+    <ion-card-header class="jeder">
       <ion-card-title>Mis Pacientes</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content  class="con">
       He aqui la lista de mis pacientes.
     </ion-card-content>
-    <ion-button size="small" (click)="btnMisP()">Acceder a la Lista</ion-button>
+    <ion-button size="full" (click)="btnMisP()" class="bnt">Acceder a la Lista</ion-button>
   </ion-card>
 
-  <ion-card>
-    <img src='../pictures/Doctor.png'>
-    <ion-card-header>
+  <ion-card class="card" color="secondary">
+    <img src='../pictures/Doctor.png' class="pic">
+    <ion-card-header class="jeder">
       <ion-card-title>Doctores</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content  class="con">
       He aqui la lista del los doctores registrados.
     </ion-card-content>
-    <ion-button size="small" (click)="btnListaD()">Acceder a la Lista</ion-button>
+    <ion-button size="full" (click)="btnListaD()" class="bnt">Acceder a la Lista</ion-button>
   </ion-card>
 
-  <ion-card>
-    <img src='../pictures/crearDoctor.png'>
-    <ion-card-header>
+  <ion-card class="card" color="secondary">
+    <img src='../pictures/crearDoctor.png' class="pic">
+    <ion-card-header class="jeder">
       <ion-card-title>Nuevo Doctor</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content  class="con">
      Aqui es el registro de un nuevo Doctor
     </ion-card-content>
-    <ion-button size="small" (click)="btncrearD()">Acceder al Formulario</ion-button>
+    <ion-button size="full" (click)="btncrearD()" class="bnt">Acceder al Formulario</ion-button>
   </ion-card>
+  
 </ion-content>

@@ -24,9 +24,32 @@
 
 #container a {
   text-decoration: none;
+  
 }
 img {
   border-radius: 50%;
   height: 200px;
   width: 200px;
+}
+.card{
+  height: 50%;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "i i h h"
+                       "i i s s" 
+                       "b b b b"                     
+}
+.jeder{
+  grid-area: h;
+}
+.pic{
+  grid-area: i;
+  align-items: center;
+}
+.con{
+  grid-area: s;
+  align-items: center;
+}
+.btn{
+  grid-area: b;
 }
