@@ -43,6 +43,8 @@ img {
 }
 .jeder{
   grid-area: h;
+  color: bisque;
+  font-family: 'Apple Chancery, cursive' ;
 }
 .pic{
   grid-area: i;
@@ -51,7 +53,21 @@ img {
 .con{
   grid-area: s;
   align-items: center;
+  font-family: 'New Century Schoolbook, TeX Gyre Schola, serif';
 }
 .btn{
   grid-area: b;
+}
+.barra{
+  grid-template-areas:  "t t t bt"
+                        "t t t bt"; 
+}
+.titulo{
+  font-family: 'Jazz LET, fantasy';
+  color: red;
+  font-size:xx-large;
+  grid-area: t;
+}
+.btnSalir{
+  grid-area: bt;
 }
