@@ -39,7 +39,9 @@ export class CrearPacientePage implements OnInit {
       doctor: this.myForm.controls.doctor.value,
       notes: this.myForm.controls.notes.value// convertir esto a array
     };
-    this.patientService.createPatient(this.patient);
+    this.patientService.createPatient(this.patient).then( res =>{
+      alert('El paciente se a generado con exito');
+    }).catch(err => alert('Error, no se puedo generar el registro'))
   }
 
 }
