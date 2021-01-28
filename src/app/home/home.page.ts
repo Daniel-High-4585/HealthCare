@@ -35,4 +35,7 @@ export class HomePage {
   btncrearD(){// Crear doctor
     this.router.navigateByUrl('/crear-doctor');
   }
+  btnReg(){// Crear doctor
+    this.router.navigateByUrl('/register');
+  }
 }
