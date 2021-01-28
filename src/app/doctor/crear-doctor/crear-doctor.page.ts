@@ -39,6 +39,8 @@ export class CrearDoctorPage implements OnInit {
       active: this.myForm.controls.active.value,
       patient: ['']
     };
-    this.doctorService.createDoctor(this.doctor);
-  }
+    this.doctorService.createDoctor(this.doctor).then( res =>{
+      alert('El doctor se a generado con exito');
+    }).catch(err => alert('Error, no se puedo generar el registro'))
+  };
 }
