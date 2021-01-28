@@ -35,9 +35,9 @@ img {
   height: 50%;
   width: 100%;
   display: grid;
-  grid-template-areas: "i i h h"
-                       "i i s s" 
-                       "b b b b"                     
+  grid-template-areas: "i i h"
+                       "i i s" 
+                       "b b b"                     
 }
 .jeder{
   grid-area: h;

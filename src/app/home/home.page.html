@@ -3,6 +3,7 @@
     <ion-title>
       HelathCare
     </ion-title>
+    <ion-button (click)="onLogout()"> Logout</ion-button>
   </ion-toolbar>
 </ion-header>
 
@@ -16,7 +17,7 @@
     <ion-card-content class="con">
      Aqui es el registro de un nuevo Paciente
     </ion-card-content>
-    <ion-button  size="full" (click)="btncrearP()" class="bnt">Acceder al Formulario</ion-button>
+    <ion-button (click)="btncrearP()" class="bnt">Acceder al Formulario</ion-button>
   </ion-card>
 
   <ion-card class="card" color="secondary">
@@ -27,7 +28,7 @@
     <ion-card-content  class="con">
       He aqui la lista del los Pacientes registrados.
     </ion-card-content>
-    <ion-button size="full" (click)="btnListaP()" class="bnt">Acceder a la Lista</ion-button>
+    <ion-button (click)="btnListaP()" class="bnt">Acceder a la Lista</ion-button>
   </ion-card>
 
   <ion-card class="card" color="secondary">
@@ -38,7 +39,7 @@
     <ion-card-content  class="con">
       He aqui la lista de mis pacientes.
     </ion-card-content>
-    <ion-button size="full" (click)="btnMisP()" class="bnt">Acceder a la Lista</ion-button>
+    <ion-button (click)="btnMisP()" class="bnt">Acceder a la Lista</ion-button>
   </ion-card>
 
   <ion-card class="card" color="secondary">
@@ -49,7 +50,7 @@
     <ion-card-content  class="con">
       He aqui la lista del los doctores registrados.
     </ion-card-content>
-    <ion-button size="full" (click)="btnListaD()" class="bnt">Acceder a la Lista</ion-button>
+    <ion-button (click)="btnListaD()" class="bnt">Acceder a la Lista</ion-button>
   </ion-card>
 
   <ion-card class="card" color="secondary">
@@ -60,7 +61,7 @@
     <ion-card-content  class="con">
      Aqui es el registro de un nuevo Doctor
     </ion-card-content>
-    <ion-button size="full" (click)="btncrearD()" class="bnt">Acceder al Formulario</ion-button>
+    <ion-button (click)="btncrearD()" class="bnt">Acceder al Formulario</ion-button>
   </ion-card>
   
 </ion-content>
